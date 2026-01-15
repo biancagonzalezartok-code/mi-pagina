@@ -1,0 +1,147 @@
+:root {
+	--negro: rgb(44, 44, 44);
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	/* background-color: #e0e0e0; */
+}
+
+.fondo {
+	width: 70%;
+	position: fixed;
+	z-index: -8;
+	transform: rotate(90deg);
+}
+
+.container {
+	height: 115vh;
+}
+
+.bg-perfil {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	top: 3%;
+	margin-bottom: 5%;
+}
+
+.perfil {
+	border-radius: 50%;
+	width: 40%;
+	transition: width 0.3s ease;
+}
+
+.perfil.shrink {
+	width: 20%;
+}
+
+@keyframes rotateBorder {
+	0% {
+		transform: rotate(360deg);
+	}
+}
+
+.subrayado {
+	display: flex;
+	margin-top: -12%;
+	content: "";
+	width: 0%;
+	height: 2px;
+	background-color: black;
+	/* animation: irVolver 6s linear infinite; */
+}
+
+/* @keyframes irVolver {
+	0% {
+		width: -100%;
+	}
+	50% {
+		width: 100%;
+	}
+} */
+
+@font-face {
+	font-family: "Acorn";
+	src: url("fuentes/Acorn-Light.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "BricoMed";
+	src: url("fuentes/BRICOLAGEGROTESQUE96PT-MEDIUM.TTF") format("truetype");
+}
+
+@font-face {
+	font-family: "SK";
+	src: url("fuentes/SK-MODERNIST-REGULAR.TTF") format("truetype");
+}
+
+@font-face {
+	font-family: "Mono";
+	src: url("fuentes/COMMITMONO-IANCHU-400-REGULAR.OTF") format("truetype");
+}
+
+hr {
+	background-color: var(--negro);
+	height: 1px;
+	border: none;
+}
+
+.nombre {
+	font-family: "Acorn";
+	font-size: 500%;
+	color: var(--negro);
+	margin-bottom: 16%;
+}
+
+.social-media {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	gap: 30px;
+}
+
+.social-media i {
+	font-size: 300%;
+	color: var(--negro);
+}
+
+footer {
+	font-family: "SK";
+	font-size: 150%;
+	font-weight: 400;
+	background-color: var(--negro);
+	padding: 0.2%;
+	color: #e0e0e0;
+	border-radius: 10px;
+	position: fixed;
+	bottom: 2%;
+}
+
+@media screen and (min-width: 100px) and (max-width: 1087px) {
+	.nombre {
+		font-size: 180%;
+	}
+
+	.container {
+		height: 95vh;
+	}
+
+	.fondo {
+		width: 132%;
+		position: fixed;
+		transform: rotate(-180deg);
+		transform: scale(190%);
+		top: 23%;
+	}
+
+	footer {
+		font-size: 100%;
+		padding: 1.2%;
+	}
+}
